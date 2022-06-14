@@ -131,9 +131,6 @@ function draw() {
   display_draw_shaded_image(shader_resampling_buffer);
   // display_draw_shaded_image(shader_luma_contrast_bright_buffer);
 
-
-
-
   control_draw_labels(2 * margin + display_width);
   control_draw_values(3 * margin + display_width + control_width + control_label_width);
 
