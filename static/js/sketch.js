@@ -1,14 +1,3 @@
-/*
-TODO:
-Kernel filter upsampling
-
-out of bounds selection
-
-About
-Help
-Documentation
-*/
-
 p5.RendererGL.prototype._initContext = function() {
   try {
     this.drawingContext =
@@ -150,7 +139,7 @@ function draw() {
 
   display_draw_selection();
 
-  draw_framerate();
+  // draw_framerate();
 }
 
 function draw_framerate() {
