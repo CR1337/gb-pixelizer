@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
+
+.link:link {
+    color: #AED6F1;
+}
+.link:visited {
+    color: #AED6F1
+}
+.link:hover {
+    color: #5DADE2;
+}
+.link:active {
+    color: #EBF5FB;
+}
+
+#settings_file_input {
+    color: #404040;
+}
+
+.color_picker {
+    background-color: #404040;
+    -webkit-appearance: none;
+    border: none;
+}
+.color_picker::-webkit-color-swatch-wrapper {
+    background-color: #404040;
+    padding: 0;
+}
+.color_picker::-webkit-color-swatch {
+    background-color: #404040;
+    border: none;
+}

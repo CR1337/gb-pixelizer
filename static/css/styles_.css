@@ -1,0 +1,132 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  /* image-rendering: -moz-crisp-edges;          Firefox                        */
+  /* image-rendering: -o-crisp-edges;            Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated; /* Chrome */
+  image-rendering: optimize-contrast;        /* CSS3 Proposed                  */
+  /* -ms-interpolation-mode: nearest-neighbor;   IE8+                           */
+}
+
+.color_picker {
+  background-color: #404040;
+  -webkit-appearance: none;
+  border: none;
+}
+.color_picker::-webkit-color-swatch-wrapper {
+  background-color: #404040;
+  padding: 0;
+}
+.color_picker::-webkit-color-swatch {
+  background-color: #404040;
+  border: none;
+}
+
+#settings_file_input {
+  color: #404040;
+}
+
+.link:link {
+  color: #86c06c;
+}
+.link:visited {
+  color: #306850;
+}
+.link:hover {
+  color: #e0f8cf;
+}
+.link:active {
+  color: #071821;
+}
+
+/* input[type="text"], select, textarea, slider {
+  background-color: #e0f8cf;
+  color: #071821
+}
+textarea:focus, input:focus {
+  color: #306850;
+} */
+
+.number_input, .slider, .select {
+  background-color: #e0f8cf;
+  color: #071821
+}
+::-moz-selection { /* Code for Firefox */
+  color: #071821;
+  background: #86c06c;
+}
+::selection {
+  color: #071821;
+  background: #86c06c;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  height: 26px;
+  width: 100%; /* Full-width */
+  background: #86c06c; /* Grey background */
+  outline: none; /* Remove outline */
+
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 26px; /* Slider handle height */
+  background: #071821; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 26px; /* Slider handle height */
+  background: #071821; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.checkbox {
+  position: relative;
+  z-index: 0;
+  -webkit-appearance: none;
+}
+.checkbox + label::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  border: 2px solid #86c06c;
+  background-color: #e0f8cf;
+  display: block;
+  content: "";
+  float: left;
+  margin-right: 5px;
+  z-index: 5;
+  position: relative;
+}
+.checkbox:checked + label::before {
+  box-shadow: inset 0px 0px 0px 3px #e0f8cf;
+  background-color: #86c06c;
+}
+
+
+
+
+.button {
+  background-color: #86c06c;
+  border: none;
+  color: #071821;
+  /* padding: 15px 16px; */
+  /* text-align: center; */
+  /* text-decoration: none; */
+  /* display: inline-block; */
+  font-size: 16px;
+  cursor: pointer;
+}
