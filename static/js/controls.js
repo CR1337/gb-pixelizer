@@ -616,6 +616,11 @@ function control_add_controls(
     );
     counter++;
 
+    control_add_link(
+        x_offset, (counter + 1) * margin + counter * control_height,
+        "https://icons8.com/", "Icons8", "_blank"
+    );
+
     // control_add_link(
     //     x_offset, (counter + 1) * margin + counter * control_height,
     //     "/about.html", "About", "_blank"
