@@ -616,18 +616,18 @@ function control_add_controls(
     );
     counter++;
 
-    control_add_link(
-        x_offset, (counter + 1) * margin + counter * control_height,
-        "/about.html", "About", "_blank"
-    );
-    control_add_link(
-        x_offset + 64, (counter + 1) * margin + counter * control_height,
-        "/help.html", "Help", "_blank"
-    );
-    control_add_link(
-        x_offset + 120, (counter + 1) * margin + counter * control_height,
-        "/documentation.html", "Documentation", "_blank"
-    );
+    // control_add_link(
+    //     x_offset, (counter + 1) * margin + counter * control_height,
+    //     "/about.html", "About", "_blank"
+    // );
+    // control_add_link(
+    //     x_offset + 64, (counter + 1) * margin + counter * control_height,
+    //     "/help.html", "Help", "_blank"
+    // );
+    // control_add_link(
+    //     x_offset + 120, (counter + 1) * margin + counter * control_height,
+    //     "/documentation.html", "Documentation", "_blank"
+    // );
 }
 
 function control_get_selected_index(select) {
