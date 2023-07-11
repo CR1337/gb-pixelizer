@@ -45,7 +45,7 @@ float matrix_2x2[64] = float[](
         63.0, 31.0, 55.0, 23.0, 61.0, 29.0, 53.0, 21.0
     );
 
-int mod(int a, int b) {
+int mod_(int a, int b) {
     return a - (b * int(floor(float(a) / float(b))));
 }
 
@@ -72,7 +72,7 @@ vec3 dither(vec3 color, vec2 uv) {
             break;
     }
 
-    coord = ivec2(mod(coord.x, matrix_size), mod(coord.y, matrix_size));
+    coord = ivec2(mod_(coord.x, matrix_size), mod_(coord.y, matrix_size));
     int i = coord.y * matrix_size + coord.x;
     return closest_color(
         color + r * (1.0 / float(matrix_size * matrix_size)

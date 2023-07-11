@@ -40,8 +40,8 @@ in vec2 vTexCoord;
 out vec4 fragColor;
 
 // some helper functions
-int round(float v) { return ifloor(v + 0.5); }
-ivec2 round(vec2 v) { return ifloor(v + 0.5); }
+int round_(float v) { return ifloor(v + 0.5); }
+ivec2 round_(vec2 v) { return ifloor(v + 0.5); }
 float saturate(float v) { return clamp(v, 0.0, 1.0); }
 vec2 saturate(vec2 v) { return clamp(v, 0.0, 1.0); }
 
@@ -55,7 +55,7 @@ ivec2 mul(vec2 v1, ivec2 v2) {
 
 // unpack a 16-bit integer from a float vec2
 int getInt16(vec2 v) {
-  ivec2 iv = round(v * 255.0);
+  ivec2 iv = round_(v * 255.0);
   return iv.x * INT(128) + iv.y;
 }
 
