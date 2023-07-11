@@ -14,7 +14,7 @@ out vec4 fragColor;
 
 const float c_pi = 3.1415926;
 
-int mod(int a, int b) {
+int mod_(int a, int b) {
     return a - (b * int(floor(float(a) / float(b))));
 }
 
@@ -129,7 +129,7 @@ void fill_kernel(bool is_lanczos, int lanczos_a) {
 
     int j = 0;
     for (int i = 0; i < max_index; ++i) {
-        ivec2 i_coord = ivec2(i / kernel_width, mod(i, kernel_width)) - ivec2(u_kernel_radius);
+        ivec2 i_coord = ivec2(i / kernel_width, mod_(i, kernel_width)) - ivec2(u_kernel_radius);
         vec2 coord = vec2(i_coord) * scale_factor;
         kernel[i] = (is_lanczos)
             ? lanzcos_2d(coord.x, coord.y, lanczos_a)
@@ -145,7 +145,7 @@ float kernel_filter(sampler2D tex, vec2 uv) {
     float accu = 0.0;
     int j = 0;
     for (int i = 0; i < max_index; ++i) {
-        ivec2 kernel_coord = ivec2(i / kernel_width, mod(i, kernel_width)) - ivec2(u_kernel_radius);
+        ivec2 kernel_coord = ivec2(i / kernel_width, mod_(i, kernel_width)) - ivec2(u_kernel_radius);
         ivec2 coord = ivec2(v_uv * vec2(textureSize(u_tex, 0)));
         ivec2 shifted_coord = coord + kernel_coord;
 
